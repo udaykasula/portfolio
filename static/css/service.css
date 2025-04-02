@@ -1,0 +1,283 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1b2e50); /* Static gradient background */
+    color: #fff;
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center; /* Space between logo and links */
+    align-items: center;
+}
+
+
+/* General Reset */
+
+
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;/* Space between cards */
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Service Card */
+.service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: #00aaff;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: #555;
+}
+
+/* Sidebar Active Link */
+.sidebar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 0px; /* Add space below the fixed navbar */
+    padding: 4rem; /* Add padding for better spacing */
+    background-color: #000000; /* Optional: Add a light background color */
+}
+/* Body Styling */
+
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #64ffda; /* Logo color */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Glowing effect */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+.logo{
+    display: none;
+}
+
+.navbar,
+.nav-links{
+    align-items: center;
+    justify-content: center;
+}
+}
+@media (max-width: 600px) {
+
+}
+@media (max-width: 500px) {
+    .nav-links{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap:2px;
+        justify-content: space-between;
+        a{
+            font-size: small;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .logo{
+        display:none;
+    }
+    nav.navbar {
+        padding: 0;
+        flex-direction: row; /* Stack navbar items vertically on small screens */
+        /* align-items: center; */
+    }
+
+    .nav-links {
+        width: 100%;
+        height: 40px;
+        flex-direction: row; /* Stack links vertically on small screens */
+        gap: 1rem;
+    }
+
+
+
+    .navbar .logo {
+        font-size: 1.5rem; /* Adjust logo size for smaller screens */
+    }
+
+    .navbar .nav-links a {
+        font-size: 1rem; /* Adjust link size for smaller screens */
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    width: 95%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    margin: 2rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .logo{
+        display: none;
+    }
+    
+    .navbar,
+    .nav-links{
+        align-items: center;
+        justify-content: center;
+    }
+    }
+    @media (max-width: 600px) {
+        .circle-container {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        
+        .circle {
+            width: 100%;
+            border: 5px solid #00aaff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    @media (max-width: 500px) {
+        .nav-links{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            gap:2px;
+            justify-content: space-between;
+            a{
+                font-size: small;
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        .logo{
+            display:none;
+        }
+        nav.navbar {
+            padding: 0;
+            flex-direction: row; /* Stack navbar items vertically on small screens */
+            /* align-items: center; */
+        }
+    
+        .nav-links {
+            width: 100%;
+            height: 40px;
+            flex-direction: row; /* Stack links vertically on small screens */
+            gap: 1rem;
+        }
+    
+        .welcome-section {
+            width: 90%; /* Adjust width for smaller screens */
+        }
+    
+        .image-section {
+            grid-template-columns: 1fr; /* Single column for images on small screens */
+        }
+    
+        .navbar .logo {
+            font-size: 1.5rem; /* Adjust logo size for smaller screens */
+        }
+    
+        .navbar .nav-links a {
+            font-size: 1rem; /* Adjust link size for smaller screens */
+            padding: 0.6rem 0.8rem;
+        }
+    }
+

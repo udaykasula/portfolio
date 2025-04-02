@@ -1,0 +1,682 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1b2e50); /* Static gradient background */
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #64ffda; /* Logo color */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Glowing effect */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    width: 80%;
+    margin: auto;
+}
+
+.welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#skills{
+    display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.circle-container {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.circle {
+    width: 100%;
+    border: 5px solid #00aaff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+/* Responsive Design */
+@media (max-width: 700px) {
+.logo{
+    display: none;
+}
+
+.navbar,
+.nav-links{
+    align-items: center;
+    justify-content: center;
+}
+}
+@media (max-width: 600px) {
+    .circle-container {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .circle {
+        width: 100%;
+        border: 5px solid #00aaff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+    }
+}
+@media (max-width: 500px) {
+    .nav-links{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap:2px;
+        justify-content: space-between;
+        a{
+            font-size: small;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .logo{
+        display:none;
+    }
+    nav.navbar {
+        padding: 0;
+        flex-direction: row; /* Stack navbar items vertically on small screens */
+        /* align-items: center; */
+    }
+
+    .nav-links {
+        width: 100%;
+        height: 40px;
+        flex-direction: row; /* Stack links vertically on small screens */
+        gap: 1rem;
+    }
+
+    .welcome-section {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .image-section {
+        grid-template-columns: 1fr; /* Single column for images on small screens */
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem; /* Adjust logo size for smaller screens */
+    }
+
+    .navbar .nav-links a {
+        font-size: 1rem; /* Adjust link size for smaller screens */
+        padding: 0.6rem 0.8rem;
+    }
+}
+/* UX Designer Portfolio Section */
+.container {
+    text-align: center; /* Centers all content inside the container */
+    padding: 50px 20px;
+}
+
+.profile-img {
+    margin: 0 auto 20px; /* Centers the image and adds spacing below it */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;
+    border: 5px solid #64ffda; /* Adds a glowing border */
+    box-shadow: 0px 0px 30px #64ffda; /* Adds a glowing shadow */
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #64ffda;
+    color: #0a192f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #52e0c4;
+    box-shadow: 0px 0px 15px #52e0c4;
+}
+
+.arrow {
+    font-size: 2rem;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section-content ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+
+
+/* About Me Section */
+.about-section {
+    display: flex;
+    align-items: center; /* Aligns image and text vertically */
+    justify-content: center; /* Centers the content horizontally */
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 auto; /* Centers the section on the page */
+    gap: 2rem; /* Space between the image and text */
+    flex-wrap: wrap; /* Wraps content on smaller screens */
+}
+
+.profile-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    border: 5px solid #64ffda; /* Adds a glowing border */
+    box-shadow: 0px 0px 30px #64ffda; /* Adds a glowing shadow */
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-content h2 span {
+    color: #64ffda; /* Highlights the "Me" text */
+}
+
+.about-content h3 {
+    font-size: 24px;
+    color: #00aaff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* My Services Section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.services h2 span {
+    color: #64ffda; /* Highlighted color for "Services" */
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    margin-top: 30px;
+}
+
+.service-box {
+    background: #112240;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+    transform: translateY(-10px); /* Adds a hover effect to lift the box */
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #64ffda;
+}
+
+.service-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #64ffda;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #52e0c4;
+    box-shadow: 0px 0px 25px #52e0c4;
+}
+
+/* My Skills Section */
+.skills-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #0a0a23;
+    color: white;
+    border-radius:2%;
+}
+
+.skills-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skills-section h2 span {
+    color: #00aaff; /* Highlighted color for "Skills" */
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    height: 100%;
+    border: 10%
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    margin-top: 30px;
+}
+
+.technical-skills {
+    width: 100%;
+}
+
+/* Technical Skills */
+.bar {
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 3px;
+    position: relative;
+}
+
+.bar div {
+    height: 20px;
+    border-radius: 5px;
+    background-color: #00aaff;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.html { width: 90%; }
+.css { width: 80%; }
+.javascript { width: 85%; }
+.python { width: 60%; }
+.react { width: 85%; }
+
+/* Professional Skills */
+.circle-container {
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #00aaff;
+    border-radius: 50%;
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Projects Section */
+.projects {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #112240; /* Matches the services section */
+    color: white;
+}
+
+.projects h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.projects h2 span {
+    color: #64ffda; /* Highlighted color for "Projects" */
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    margin-top: 30px;
+}
+
+.project-box {
+    background: #0a192f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-box:hover {
+    transform: translateY(-10px); /* Adds a hover effect to lift the box */
+}
+
+.project-box .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #64ffda;
+}
+
+.project-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #64ffda;
+}
+
+.project-box p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.project-box button {
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #64ffda;
+    transition: 0.3s ease-in-out;
+}
+
+.project-box button:hover {
+    background: #52e0c4;
+    box-shadow: 0px 0px 25px #52e0c4;
+}
+
+/* Contact Me Section */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #112240; /* Matches the style of other sections */
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section h2 span {
+    color: #00aaff; /* Highlighted color for "Me" */
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    background-color: #0a192f;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form button {
+    background: #00aaff;
+    color: #0a192f;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #64ffda;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #00aaff;
+    box-shadow: 0px 0px 25px #00aaff;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
